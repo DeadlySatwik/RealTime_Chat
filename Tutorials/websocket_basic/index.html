@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WebSocket Test</title>
+</head>
+<body>
+  <h1>WebSocket Client</h1>
+  <script>
+    const socket = new WebSocket("ws://localhost:8080");
+
+    socket.onopen = () => {
+      console.log("WebSocket connected!");
+      socket.send("Hello from client!");
+    };
+
+    socket.onmessage = (event) => {
+      console.log("Message from server:", event.data);
+    };
+
+    socket.onclose = () => {
+      console.log("WebSocket closed.");
+    };
+
+    socket.onerror = (error) => {
+      console.error("WebSocket error:", error);
+    };
+    <script src="index.js"/>
+  </script>
+</body>
+</html>
