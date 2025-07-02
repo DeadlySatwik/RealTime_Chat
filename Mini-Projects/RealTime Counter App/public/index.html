@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Time Counter</title>
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="connection-status" class="status">
+            <span class="status-dot"></span>
+            <span class="status-text">Connecting...</span>
+        </div>
+        <div id="super-counter">
+            <div id="counter-window">
+                <div id="output"></div>
+                <div id="feedback"></div>
+            </div>
+            <input id="handle" type="text" placeholder="Handle" />
+            <button id="minus-btn">-</button>
+            <button id="reset-btn">Reset</button>
+            <button id="plus-btn">+</button>
+        </div>
+        <div id="user-count">Online Users: 0</div>
+        <p class="info">Counter updates in real-time across all connected clients!</p>
+    </div>
+    <script src="counter.js"></script>
+</body>
+
+</html>

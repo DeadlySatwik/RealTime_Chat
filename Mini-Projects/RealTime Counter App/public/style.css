@@ -1,0 +1,138 @@
+body {
+    font-family: 'Press Start 2P', 'Courier New', monospace;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+h2 {
+    font-size: 18px;
+    padding: 10px 20px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.connected .status-dot { 
+    background-color: #2ecc71; 
+}
+.disconnected .status-dot { 
+    background-color: #e74c3c; 
+}
+.connecting .status-dot { 
+    background-color: #f1c40f;
+    animation: blink 1s infinite;
+}
+.error .status-dot { 
+    background-color: #e74c3c; 
+}
+
+@keyframes blink {
+    50% { opacity: 0.5; }
+}
+
+
+#super-counter {
+    max-width: 600px;
+    margin: 30px auto;
+    border: 2px solid #888;
+    box-shadow: 4px 4px 0 #ccc;
+    border-radius: 3px;
+    background: #fff;
+}
+
+#counter-window {
+    height: 400px;
+    overflow: auto;
+    background: #fff;
+    border: 1px solid #ccc;
+}
+
+#output p {
+    padding: 14px 0px;
+    margin: 0 20px;
+    border-bottom: 1px solid #ddd;
+    color: #444;
+}
+
+#feedback p {
+    color: #666;
+    padding: 14px 0px;
+    margin: 0 20px;
+}
+
+#output strong {
+    color: #333;
+    text-transform: uppercase;
+}
+
+label {
+    box-sizing: border-box;
+    display: block;
+    padding: 10px 20px;
+    color: #444;
+}
+
+input {
+    padding: 8px 16px;
+    box-sizing: border-box;
+    background: #fff;
+    border: 1px solid #999;
+    display: block;
+    width: 100%;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    color: #333;
+}
+
+button {
+    background: #ddd;
+    color: #333;
+    font-size: 16px;
+    border: 1px solid #999;
+    padding: 10px 0;
+    width: 10%;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ccc;
+    color: #000;
+}
+
+#plus-btn {
+    background: #4CAF50;
+    color: white;
+}
+
+#minus-btn {
+    background: #f44336;
+    color: white;
+}
+
+#reset-btn {
+    background: #ff9800;
+    color: white;
+}
+
+.info {
+    color: #666;
+    font-style: italic;
+    margin-top: 20px;
+}
